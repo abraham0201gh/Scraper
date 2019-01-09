@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>News Scraper - Saved Articles</title>
+  <!-- Compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/app.js"></script>
+
+</head>
+
+<body>
+ 
+    <!--Jumbotron using Bootstrap-->    
+    <div class="container">
+        <div class="jumbotron">
+          <ul id="menu">
+            <li><a href="/index.html" id="homeLink">Home</a>&nbsp;&nbsp;</li>
+            <li><a href="/saved-articles.html" id="savedLink">Saved Articles</a>&nbsp;&nbsp;</a></li> 
+            <!-- <li><button type="class" button class="btn btn-primary btn-sm" id="scrapeBtn"><span class="fa fa-repeat"></span> Scrape New Articles</button>&nbsp;&nbsp;</a></li>  -->
+            <li><button type="class" button class="btn btn-primary btn-sm" id="clearBtn"><span class="fa fa-times"></span> Clear Articles</button></a></li>  
+            <li><span id="small-logo">NYT Scraper</span></li> 
+          </ul>
+          <hr>
+          <br>
+          <h1><span class="fa fa-empire">&nbsp;&nbsp;</span>Saved Articles</h1>
+          <br>
+          <h4>Daily News Scraper</h4>
+          <br>
+        </div>
+    </div>       
+
+    <!--Scraped Articles Cards-->
+    <div class="container-fluid" id="article-containerScraped">
+        <div data-_id="" class="card">
+          <div class="card-header" id="articles">
+            <h3>
+              <a class="article-link" target="_blank" rel="noopener noreferrer" href="">
+              </a>
+            </h3>
+          </div>
+        <div class="card-body">
+        </div>
+        <!-- <p><a class="btn btn-warning btn-sm" type="button" id="saveArticle">Save Article</a></p> -->
+        <div id="notes"></div>
+    </div>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div id="containerFooter">
+      <p>Daily News Scraper - New York Times Version</p>
+    </div>
+  </footer>
+
+
+  <!-- 
+    -- Button trigger modal --
+    <button type="button" id="modalDisplay" style="display: none;" class="btn btn-primary" data-toggle="modal" data-target="#matchModal"></button>
+    
+    -- Modal --
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Your Best Match</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+        <div class="modal-body">
+            <h5 class="modal-title" id="exampleModalLabel">Say Hello to: <span id="yourMatch"></span></h5>
+            <div style="display: flex; justify-content: center;">
+            <image id="matchImage" src=""></image>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            --   <button type="button" class="btn btn-primary">Save changes</button>    --
+
+        </div>
+        </div>
+        </div>
+    </div> -->
+
+ </body>
+
+</html>
+      
+

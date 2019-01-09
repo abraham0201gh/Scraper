@@ -1,0 +1,147 @@
+
+body { 
+  background-image: url("/assets/images/news-selling.jpg");
+  opacity: 0.96;
+}
+
+.jumbotron {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  background-color: rgba(12, 182, 250, 0.932);
+}
+
+#menu, li {
+  display: inline;
+}
+
+a {
+  color: rgb(61, 66, 114);
+}
+
+#homeLink, #savedLink {
+  font-weight: 500;
+  color: white;
+}
+
+#small-logo {
+  float: right;
+  font-size: 150%;
+  font-style: oblique;
+  color: red;
+}
+
+.card {
+  margin: 1%;
+  padding: 1%;
+}
+
+.container-fluid {
+  width: 85%;
+}
+
+#saveArticle, #articleNotes, #deleteArticle {
+  color: black;
+  width: 16%;
+}
+
+#saveArticle {
+  margin-left: 0%; 
+
+}
+
+.footer {
+  font-weight: 600;
+}
+
+#containerFooter {
+  color:rgb(35, 2, 155);
+  margin-left: 1.25%;
+}
+
+#notes {
+  color: white;
+}
+
+
+@media only screen and (max-width: 980px) {
+
+  .jumbotron {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    background-color: rgba(12, 182, 250, 0.932);
+  }
+    
+  .container-fluid {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ 
+  .jumbotron {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    background-color: rgba(12, 182, 250, 0.932);
+  }
+ 
+  .container-fluid {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .jumbotron {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    background-color: rgba(12, 182, 250, 0.932);
+  }
+  
+  .container-fluid {
+    width: 65%;
+  }
+}
+
+
+
+  /* #wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%; 
+}*/
+/* 
+#articles {
+  display: inline-block;
+  overflow: auto;
+  width: 60%;
+  height: 700px;
+}
+
+#notes {
+  float: right;
+  width: 30%;
+}
+
+textarea, input {
+  display: block;
+  width: 100%;
+  background-color: #FCF5C7;
+}
+
+input {
+  height: 36px;
+  font-size: 24px;
+}
+
+textarea {
+  height: 200px;
+  font-size: 18px;
+} 
+
+
+ */
