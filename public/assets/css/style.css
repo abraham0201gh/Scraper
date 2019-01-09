@@ -67,8 +67,6 @@ a {
 @media only screen and (max-width: 980px) {
 
   .jumbotron {
-    padding-top: 3%;
-    padding-bottom: 3%;
     text-align: center;
     background-color: rgba(12, 182, 250, 0.932);
   }
@@ -76,34 +74,78 @@ a {
   .container-fluid {
     width: 85%;
   }
+
+  #small-logo {
+    float: right;
+    font-size: 110%;
+    font-style: oblique;
+    color: red;
+    margin-left:50%
+  }
+
+  #homeLink, #savedLink {
+    font-weight: 500;
+    color: white;
+  }
+
+  #menu {
+    padding-left: 0%
+  }
 }
 
 @media only screen and (max-width: 768px) {
  
   .jumbotron {
-    padding-top: 2%;
-    padding-bottom: 2%;
     text-align: center;
     background-color: rgba(12, 182, 250, 0.932);
   }
  
   .container-fluid {
-    width: 75%;
+    width: 90%;
+  }
+
+  #small-logo {
+    float: right;
+    font-size: 90%;
+    font-style: oblique;
+    color: red;
+    margin-left:50%
+  }
+
+  #homeLink, #savedLink {
+    font-weight: 500;
+    color: white;
+  }
+
+  #menu {
+    padding-left: 0%
   }
 }
 
 @media screen and (max-width: 600px) {
 
   .jumbotron {
-    padding-top: 1%;
-    padding-bottom: 1%;
     text-align: center;
     background-color: rgba(12, 182, 250, 0.932);
   }
   
   .container-fluid {
-    width: 65%;
+    width: 90%;
   }
+
+  #small-logo {
+    float: right;
+    font-size: 75%;
+    font-style: oblique;
+    color: red;
+    margin-left: 50%
+  }
+
+  #homeLink, #savedLink {
+    font-weight: 500;
+    color: white;
+  }
+
 }
 
 
