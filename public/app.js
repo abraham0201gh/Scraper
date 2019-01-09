@@ -27,8 +27,8 @@ $(document).on("click", "#scrapeBtn", function() {
   });
 
   $("#articles").empty();
- 
-});  
+
+});
 
 // Grab the articles as JSON
 $.getJSON("/articles", function(data) {
@@ -52,7 +52,7 @@ $(document).on("click", "#clearBtn", function() {
 // Saved Articles link is clicked
 $(document).on("click", "#savedLink", function() {
   $("#articles").empty();
-  $("#articles").append("No Articles Currently Available.  To View News Articles, Click The Scrape Button Or The Saved Articles Link.");
+  // $("#articles").append("No Articles Currently Available.  To View News Articles, Click The Scrape Button Or The Saved Articles Link.");
 });
 
 
