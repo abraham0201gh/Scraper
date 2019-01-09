@@ -14,19 +14,33 @@ $(document).on("click", "#homeLink", function() {
   });
 });
 
+
 // When the Scrape button is clicked
 $(document).on("click", "#scrapeBtn", function() {
-  $("#articles").empty();
-  // Grab the id associated with the article from the submit button
-  $.getJSON("/articles", function(data) {
-    // For each one
-    for (var i = 0; i < data.length; i++) {
-      // Create Div to append scraped information
-      // Display the information on the page
-      $("#articles").append("<div class='card'>" + "<p data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + data[i].summary + "<br />" + "<br />" + "<a href='https://www.nytimes.com" + data[i].link + "'>" + data[i].link + "</a>" + "</p>" + "<p><a class='btn btn-warning btn-sm' type='button' id='saveArticle'>Save Article</a></p>" + "<br />" + "</div>");
-    }
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  })
+  .then (function(data) {
+      console.log(data);
+      location.reload();
   });
+
+  $("#articles").empty();
+ 
+});  
+
+// Grab the articles as JSON
+$.getJSON("/articles", function(data) {
+  // For each one
+
+  for (var i = 0; i < data.length; i++) {
+    // Create Div to append scraped information
+    // Display the information on the page
+    $("#articles").append("<div class='card'>" + "<p data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + data[i].summary + "<br />" + "<br />" + "<a href='https://www.nytimes.com" + data[i].link + "'>" + data[i].link + "</a>" + "</p>" + "<p><a class='btn btn-warning btn-sm' type='button' id='saveArticle'>Save Article</a></p>" + "<br />" + "</div>");
+  }
 });
+
 
 // When the Clear Articles button is clicked, all articles are cleared from the scrape page
 $(document).on("click", "#clearBtn", function() {
