@@ -2,7 +2,7 @@
 
 The app is deployed on Heroku: https://scraper-heroku18.herokuapp.com/  
 
-### Overview
+## Overview
 
 In this assignment, a web app is created that lets users view and leave comments on the latest news.  Mongoose and Cheerio are used to scrape news from another site.
 
