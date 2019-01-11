@@ -5,8 +5,11 @@ $(document).on("click", "#homeLink", function() {
   $("#articles").empty();
   // Grab the id associated with the article from the submit button
   $.getJSON("/articles", function(data) {
+    //For each one (lists most current 10 articles)
+    var numberTotal = data.length - 10
+    for (var i = numberTotal; i < data.length; i++) {
     // For each one
-    for (var i = 0; i < data.length; i++) {
+    // for (var i = 0; i < data.length; i++) {
       // Create Div to append scraped information
       // Display the information on the page
       $("#articles").append("<div class='card'>" + "<p data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + data[i].summary + "<br />" + "<br />" + "<a href='https://www.nytimes.com" + data[i].link + "'>" + data[i].link + "</a>" + "</p>" + "<p><a class='btn btn-warning btn-sm' type='button' id='saveArticle' data-id='" + data[i]._id + "'>" + "Save Article</a></p>" + "<br />" + "</div>");
@@ -32,9 +35,11 @@ $(document).on("click", "#scrapeBtn", function() {
 
 // Grab the articles as JSON
 $.getJSON("/articles", function(data) {
+  //For each one (lists most current 10 articles)
+  var numberTotal = data.length - 10
+    for (var i = numberTotal; i < data.length; i++) {
   // For each one
-
-  for (var i = 0; i < data.length; i++) {
+  // for (var i = 0; i < data.length; i++) {
     // Create Div to append scraped information
     // Display the information on the page
     $("#articles").append("<div class='card'>" + "<p data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + data[i].summary + "<br />" + "<br />" + "<a href='https://www.nytimes.com" + data[i].link + "'>" + data[i].link + "</a>" + "</p>" + "<p><a class='btn btn-warning btn-sm' type='button' id='saveArticle'>Save Article</a></p>" + "<br />" + "</div>");
@@ -121,7 +126,6 @@ $(document).on("click", "#savenote", function() {
   $("#bodyinput").val("");
 });
 
-
 // When you click the saveArticle button
 $(document).on("click", "#saveArticle", function() {
   // Grab the id associated with the article from the submit button
@@ -129,7 +133,7 @@ $(document).on("click", "#saveArticle", function() {
 
   // POST request to the server to save article in database
   $.ajax({
-    method: "POST",
+    method: "PUT",
     url: "/articles/" + thisId,
     data: {
       // Creating new field, corresponds to new saved articles
@@ -141,4 +145,23 @@ $(document).on("click", "#saveArticle", function() {
       // Log the response
       console.log(data);
     });
+    $(this).parent().parent().hide(); 
+  });
+
+// When you click the saveArticle button
+$(document).on("click", "#saveArticle", function() {
+  // Grab the id associated with the article from the submit button
+  var thisId = $(this).attr("data-id");
+
+  // POST request to the server to delet articles in database
+  $.ajax({
+    method: "DELETE",
+    url: "/articles" 
   })
+    // With that done
+    .then(function(data) {
+      // Log the response
+      //console.log(data);
+    });
+  $(this).parent().parent().hide();  
+});
